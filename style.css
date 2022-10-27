@@ -1,0 +1,276 @@
+html{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-image: var(--Background-Color);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 75px 1fr ;
+    grid-template-columns: 5% 80% 15%;
+}
+
+/* TOP BAR */
+nav{
+grid-area: 1;
+}
+header{
+    grid-column: span 3;
+    grid-row: 1;
+    background: var(--Primary-Color);
+    display: flex;
+    z-index: 900;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+}
+.ProfileImage{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+
+.togglecheck:checked ~ .Profile{
+    display: flex;
+}
+.togglecheck{
+    opacity: 0;
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+.layered-image {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    display: grid;
+    place-items: center;
+}
+
+.layered-image input {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.layered-image div {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+
+}
+
+.topmost {
+    z-index: 666;
+}
+
+.Toptext{
+    color: var(--Text-Color);
+    text-decoration: none;
+    margin-right: 10vmin;
+    font-size: 1.5em;
+}
+
+a:visited{
+    color: var(--Text-Color);
+}
+
+.Profile{
+    display: none;
+    align-items: center;
+    background-color: var(--NonTransparentPrimaryColor);
+    flex-direction: column;
+    border: rgb(63, 122, 211) dotted 2px;
+    border-radius: 20px;
+    row-gap: 10px;
+} 
+.ProfileText{
+    margin-block-start: 0em;
+    margin-block-end: 0;
+    font-size: 35px;
+}
+.LogOut{
+    height: 50px;
+    width: 100px;
+    grid-row: 2;
+}
+.MinProfil{
+    grid-row: 1;
+}
+
+
+/*MAIN PAGE */
+
+main{
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    padding-top: 5%;
+    flex-direction: column;
+
+}
+main a{
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 2em;
+    text-decoration: none;
+    text-align: center;
+}
+.Välkommen{
+    background-color: var(--Text-Color);
+    border-radius: 10px;
+    border: rgb(169, 223, 255) 5px solid;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: auto;
+    grid-column: 2;
+}
+
+
+
+
+/*EGNA PAGE*/
+
+.EgenPage{
+    display: grid;
+    grid-row: 2;
+    grid-column: 1/4;
+    padding-top: 5%;
+    grid-template-columns: 5% 80% 15%;
+    grid-template-rows: 100px 200px 1fr;
+    row-gap: 10px;
+}
+
+.OwnPageTopBar{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    background-color: var(--Primary-Color);
+    align-items: center;
+    border-radius: 20px;
+}
+.OwnPageProfileImage{
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 50%;
+}
+.EditKnapp img{
+
+    width: 50px;
+    height: 50px;
+}
+.Name{
+    grid-column: 2;
+    font-size: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+.Bio{
+    grid-column: 2;
+    border-radius: 20px;
+    grid-row: 2;
+    background-color: var(--Primary-Color);
+
+}
+
+
+.PhotoHold{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color:  var(--Primary-Color);
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    align-items: center;
+    row-gap: 20px;
+    border-radius: 20px;
+
+}
+.PhotoHold img{
+    max-width: 90%;
+}
+.BioText{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* UPLOAD */
+
+
+
+
+/* FOLLOWING */
+
+.Following{
+    display: grid;
+    grid-template-columns: 5% 1fr 1%;
+    grid-template-rows: 1% 1fr 1fr;
+}
+.Feed{
+    background-color: var(--Primary-Color);
+    grid-column: 2;
+    grid-row: 2/-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    align-items: center;
+    row-gap: 20px;
+    border-radius: 20px;
+}
+.Feed img{
+    max-width: 90%;
+}
+
+.EnhancedPhoto{
+    background-color: var(--Primary-Color);
+    border-radius: 20px;
+    grid-row: 2;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 90% ;
+    overflow: auto;
+}
+
+
+.Photo{
+    margin-top: 3%;
+}
+
+.Comments{
+    background-color: white;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.theme-light {
+--Background-Color:  url(https://static.vecteezy.com/system/resources/previews/004/750/609/original/flat-design-abstract-background-soft-liquid-shapes-template-with-modern-gradient-background-colors-cool-aesthetic-background-design-suitable-for-social-media-post-mobile-app-banner-web-ads-free-vector.jpg) ;
+--Primary-Color: #00ccff8c;
+--NonTransparentPrimaryColor: #73e2f9;
+--Text-Color: #Ffff ;
+}
+
+.theme-dark{
+--Background-Color:  url(https://static.vecteezy.com/system/resources/previews/004/750/609/original/flat-design-abstract-background-soft-liquid-shapes-template-with-modern-gradient-background-colors-cool-aesthetic-background-design-suitable-for-social-media-post-mobile-app-banner-web-ads-free-vector.jpg) ;
+--Primary-Color: #a8c0d8c8;
+--NonTransparentPrimaryColor: #a8c0d8;
+--Text-Color: rgb(253, 253, 253) ;
+}

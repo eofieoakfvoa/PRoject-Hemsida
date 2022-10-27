@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="Settings.js"></script>
+</head>
+<body>
+    <header>    
+            <div class="Flöde">
+                <a href="Feed.html" class="Toptext" >Flöde</a>
+            </div>
+            <div class="Följer">
+                <a href="Following.html" class="Toptext"  >Följer</a>
+            </div>
+            <div class="Upload">
+                <a href="upload.html" class="Toptext" >Upload</a>
+            </div>
+            <div class="layered-image">
+                <div class="topmost">
+                    <input type="checkbox" class="togglecheck">
+                    <div class="Profile" >
+                        <a href="MinProfil.html" class="MinProfile">Min Profil</a>
+                        <input type="button" class="LogOut">
+                    </div>
+                    </div>
+                    <div>
+                        <img class="ProfileImage" src="http://mcdowellhomes.com.au/wp-content/uploads/2016/09/no-user-image-300x300.gif" alt="Din ProfilBild">
+                    </div>
+                </div>
+
+    </header>
+
+    <main>
+        <h1>Skriv Ditt Nya Namn</h1>
+        <input type="text" id="textbox_id" onblur="GetUsername()">
+        <h1>Theme Switch</h1>
+        <button id="switch" onclick="toggleTheme()">Switch</button>
+    </main>
+
+</body>
+
+
+</html> 
